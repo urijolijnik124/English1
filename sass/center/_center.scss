@@ -1,0 +1,188 @@
+.word{
+  text-align: center;
+  position: relative;
+  top: 109px;
+  font-size: 35px;
+  margin-bottom: 160px;
+}
+@mixin columns($left){
+  column-count: 1;
+ left: $left;
+  border-radius: 20px;
+  position: relative;
+
+  border: 1px solid #D0D9EE;
+
+
+}
+.column{
+  @include columns(20px);
+
+
+}
+.column2{
+  @include columns(40px);
+
+}
+.column3{
+  @include columns(60px)
+}
+@mixin vector($rad){
+  border-radius: $rad;
+}
+#vector{
+  @include vector(20px);
+}
+ #vector2, #vector3{
+  @include vector(20px);
+}
+.image-column {
+
+
+  position: relative;
+
+}
+
+@mixin column_text(){
+
+
+  text-align: justify-all;
+
+
+}
+.column-text1 {
+  @include column_text();
+}
+.column-text2 {
+  @include column_text();
+}
+.column-text3 {
+  @include column_text();
+}
+
+@mixin arts($bottom){
+  position: relative;
+
+ bottom: $bottom;
+
+
+}
+
+#art, #art2  {
+  @include arts(200px);
+}
+#art3 {
+  @include arts(227px);
+}
+
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-left: 80px;
+
+}
+@mixin texts($bottom){
+  position: relative;
+  margin-bottom: $bottom;
+ margin-left: 60px;
+
+
+
+}
+.text1 {
+  @include texts(-190px);
+
+}
+.text2{
+  @include texts(-210px);
+
+}
+.text3 {
+  @include texts(-225px);
+
+}
+.line{
+ border:1px solid #D0D9EE;
+  width: 220px;
+  margin-left: 65px;
+
+}
+@mixin result($top){
+  margin-top:$top;
+}
+
+.result {
+  @include result(63px);
+}
+.result {
+  @include result(57px);
+}
+
+@mixin btn(){
+
+  width: 300px;
+  height: 70px;
+  position: relative;
+  left:30px;
+  padding: 23px 61px 23px 64px;
+  border-radius: 30px;
+  border: 1px solid #EFE187;
+background:  linear-gradient(180deg, #FFF6A3 0%, #F5D62E 100%);
+
+}
+.send {
+  position: relative;
+  bottom: 2px;
+  width: 168px;
+  height:20px;
+  font-weight: 700;
+  font-size: 18px;
+
+
+}
+.btn, .btn2, .btn3 {
+  @include btn();
+}
+.btn{
+  margin-bottom: 40px;
+}
+.btn2{
+  position: relative;
+  top:20px;
+  margin-bottom: 60px;
+}
+.btn3{
+  position: relative;
+  bottom:20px;
+  margin-bottom: 20px;
+
+}
+@mixin left(){
+  position: relative;
+  left:80px;
+}
+.for_whom, .target, .result, .down
+{
+  @include left();
+
+}
+@mixin res($top){
+  position: relative;
+  bottom:$top;
+}
+.res1{
+  @include  res(40px);
+}
+.res2{
+  @include res(30px);
+}
+.res3 {
+  @include res(10px);
+}
+.lin{
+  position: relative;
+  top: 25px;
+}
+

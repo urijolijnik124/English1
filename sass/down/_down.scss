@@ -1,0 +1,50 @@
+
+.footer {
+width: 1342px;
+ position:absolute;
+ right: 7px;
+ top:1596px;
+}
+
+.bonus {
+ position: absolute;
+top:2100px;
+ height: 324px;
+ left: 300px;
+ display: flex;
+ z-index: 10;
+
+}
+@mixin  bonus($size, $weight) {
+ text-align: center;
+ position: relative;
+ top: 510px;
+ right: 150px;
+ z-index: 11;
+font-weight: $weight;
+ font-size: $size;
+ color: #ffffff;
+}
+
+ .bonus1{
+ @include bonus(40px, 900);
+}
+.curs{
+ line-height: 0.5;
+
+ @include bonus(25px, 500);
+}
+.abzac {
+ text-align: justify;
+ display: flex;
+ justify-content: flex-end;
+ position: relative;
+ z-index: 11;
+top:200px;
+ right: 330px;
+ line-height: 2.1;
+ color: #ffffff;
+ font-size: 12px;
+ font-weight: 500;
+
+}

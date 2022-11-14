@@ -1,0 +1,117 @@
+#decor{
+  width: 525px;
+  height: 700px;
+  position: absolute;
+  margin-right: 15px;
+  margin-left: 0;
+}
+@mixin title-h1($right){
+  text-align: center;
+  letter-spacing: 3px;
+
+
+
+  font-weight: 900;
+ margin-top: 5px;
+  color: black;
+ margin-right:  $right  ;
+}
+.title-h1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 25px;
+ left: 30px;
+  @include title-h1(30px);
+}
+
+@mixin aqua-color(){
+  color: deepskyblue;
+}
+.aqua{
+  @include aqua-color();
+}
+
+@mixin title-h1-h6(){
+  text-align: center;
+
+margin-left: 50px;
+  font-weight: 600;
+
+  @include aqua-color();
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.h1-h6{
+  @include title-h1-h6();
+  display: flex;
+  justify-content: left;
+}
+.text {
+  text-align: justify-all;
+  width: 500px;
+  margin-left: 50px ;
+  font-size: 15px;
+}
+.Intermediate {
+  border: 3px solid #ECF1FE;
+  width: 560px;
+
+
+  position: relative ;
+  left: 540px;
+  bottom:10px;
+  height: 290px;
+  margin-top: 20px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+
+}
+@mixin levers($top, $bottom, $right){
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: $bottom ;
+  margin-right: $right;
+  margin-top: $top;
+}
+.levers {
+  @include levers(5px, 3px, 145px)
+}
+
+.levers2 {
+  @include levers(3px, 0,  310px)
+}
+@mixin leve($top){
+  margin-left:5px ;
+  margin-right:5px;
+  margin-top: $top;
+  border: 3px solid #ECF1FE;
+  border-radius: 20px;
+ width: 127px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+
+
+}
+.lever{
+@include leve(10px)
+}
+.lever2{
+  margin-bottom: 20px;
+  @include leve(2px)
+
+}
+@mixin lev($rgt){
+  position:relative;
+  right: $rgt;
+}
+.lev{
+  @include lev(80px)
+}
+.lev2{
+  @include lev(60px)
+}

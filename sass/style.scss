@@ -1,0 +1,17 @@
+#decor{
+width: 500px;
+  height: 500px;
+position: absolute;
+}
+/*
+body {
+
+
+  width: 1340px;
+  max-width: 1340px;
+}
+
+ */
+@import "up/_up.scss";
+@import "down/_down.scss";
+@import "center/_center.scss";
